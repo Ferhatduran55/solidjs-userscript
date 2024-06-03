@@ -1,15 +1,13 @@
 /* @refresh reload */
-import { render } from 'solid-js/web';
+import { render } from 'solid-js/web'
 
-import '@/index.css';
-import App from '@/App';
+import './assets/styles/index.css'
+import App from './App'
 
 const root = document.body;
 
 if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
-  throw new Error(
-    'Root element not found.',
-  );
+    throw new Error("Root element not found.");
 }
 
 render(() => <App />, root);
