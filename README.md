@@ -4,18 +4,13 @@
 gh repo clone Ferhatduran55/solidjs-userscript
 ```
 2. Then download the requirements:
-using `pnpm`
+using `bun`
 ```
-pnpm install
-```
-or `npm`
-```
-npm install
+bun install
 ```
 3. After the download is completed, you can adjust the userscript object in `package.json` as you wish by using the [setup guide](https://github.com/va4ok/userscript-builder?tab=readme-ov-file#setup). You can adjust the user script's metadata using the child meta object, where some adjustments come by default and you don't need to type them.
 ```json package.json
 {
-  ...
   "userscript": {
     "entry": "./dist/index.js",
     "dev": "./dist",
@@ -32,8 +27,7 @@ npm install
       ],
       "grant": "GM_addStyle"
     }
-  },
-  ...
+  }
 }
 ```
 
@@ -70,13 +64,13 @@ export default defineConfig({
 
 5.After it is build, user script will be created in the `dist` folder by default.
 ```
-pnpm build
+bun run build
 ```
 ![image](https://github.com/Ferhatduran55/solidjs-userscript/assets/42141771/42c2c871-a7ce-471e-b86f-055d5cfe16ac)
 
 If it is release, user script will be created in the `release` folder by default.
 ```
-pnpm release:bugfix
+bun run release:bugfix
 ```
 ![image](https://github.com/Ferhatduran55/solidjs-userscript/assets/42141771/ad20fb5e-1bc1-4246-985b-f215e4ab34f5)
 
